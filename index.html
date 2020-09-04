@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Utilizing video and audio</title>
+	</head>
+	<body>
+		<h1>Utilizing video and audio</h1>
+		<h2>Adding audio:</h2>
+		<p>There are two basic ways to access audio clips from a web page...you can link to them, or you can embed them directly in the page.
+In this section you’ll learn how to link to audio files. Embedding audio directly into a web page will be addressed in another section.</p>
+		<h3>Linking audio with links:</h3>
+		<p>To link an audio file, use the < a > element's href tag to link to either an online file specified on a server or database, or a physical file onn the file system. the link will send the user to a default browser media player which plays the audio.</p>
+		<a href="Blues for Beth.ogg">Play &ldquo;Blues For Beth&rdquo;</a>
+		<p>the code;</p>
+		<p>< a href="Blues for Beth.ogg">Play &ldquo; Blues For Beth&rdquo; < /a ></p>
+		<p>Warning: only Firefox 3.6, Chrome 6+, and Opera 1.5 can support ogg format. try below link for Safari 5+, and IE9</p>
+		<a href="Blues for Beth.mp3">Play &ldquo;Blues For Beth&rdquo; MP3 version for Safari</a>
+		<h2>Adding video:</h2>
+		<p>can a page can link to a video clip? The answer is yes.
+And...you do it exactly the same way as linking to an audio clip...using an anchor element. Just like with audio clips, a video clip that is linked to will play in whatever compatible external media player the visitor has installed on their computer.</p>
+		<a href="Nissan Ariya.mp4">Play Nissan Ariya</a>
+		<p>linking to multimedia files is very simple to do. It’s like linking to an image or a document file. In the next section you’ll learn how to embed multimedia right in a web page.</p>
+		<h2>Adding audio &amp video in webpage:</h2>
+		<p>In an earlier section, I said that audio and video could be embedded directly into a web page....so now we want to know how that is done.</p>
+		<br />
+		<p>When you embed audio and video into a web page, media players are displayed in the page as illustrated here. A visitor can use the player controls to play the audio and video directly in the web page.
+This example used the Google Chrome browser... other browsers will have a slightly different look to the player controls...and some browsers, like Internet Explorer, may not show the video player controls until you mouse over the image.</p>
+		<br />
+		<h3>Audio:</h3>
+		<audio src="Blues for Beth.mp3" controls>
+			<p>Whoops! This browser can't play the audio file</p>
+		</audio>
+		<h3>Video:</h3>
+		<video width="427" height="240" controls>
+			<source src="Nissan Ariya.mp4" />
+			<source src="Nissan Ariya.webm" />
+			<p>Whoops! This browser can't play the video file</p>
+		</video>
+		<br />
+		<p>< h3 >The code:< /h3 >
+		< h3 >Audio:< /h3 >
+		<br />
+		< audio src="Blues for Beth.mp3" controls >
+		<br />
+			< p >Whoops! This browser can't play the audio file< /p >
+			<br />
+		< /audio >
+		<br />
+		< h3 >Video:< /h3 >
+		<br />
+		< video width="427" height="240" controls>
+		<br />
+			< source src="Nissan Ariya.mp4" / >
+			<br />
+			< source src="Nissan Ariya.webm" / >
+			<br />
+			< p >Whoops! This browser can't play the video file< /p >
+			<br />
+		< /video ></p>
+		<p>and notice that < audio > and < video > elements were used to embed the media files. We will learn more about these elements</p>
+		<p>Actually, the < audio > and < video > elements are new in HTML 5, and most browsers that are compatible with HTML 5 implement these elements. A < ! DOCTYPE html > tag must be kept at the very top to tell old browsers to use HTML 5</p>
+		<h2>Different Files, Different Browsers:</h2>
+		<p>To specify more than one audio or video format the < source > element can be used. As mentioned earlier, providing audio and video in multiple formats helps to ensure that the media files will play in different browsers that visitors to a web page might have.
+The < source > element is illustrated here in blue. Note that the < source > tag is self-closing.
+In this example, audio files in MP3 and Ogg Vorbis formats are being provided, and video files in MP4 and webM formats are being provided. Since the Safari, Chrome, and Internet Explorer browsers support MP3 audio, and the Opera, Firefox, and older Chrome browsers support the Ogg Theora format, providing both of these audio formats should cover visitors that have browsers that support the HTML 5 < audio > element. Similarly, providing the video files in the two different formats should cover visitors whose browsers support the HTML 5 < video > element.
+The < source > element has several additional attributes that can be used. To see an example of these attributes and how they are used.</p>
+		<a href="http://signal.cty.jhu.edu/CompSci/WEB/Unit_9/Resources/VideoSourceAttributes.html">Please click here for an example</a>
+	</body>
+</html>
